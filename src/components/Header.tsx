@@ -23,23 +23,23 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
+      isScrolled ? 'bg-black shadow-lg' : 'bg-black/95 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
               src="/public/logo-mrcrm.png" 
               alt="Mr.CRM" 
-              className="h-8 w-auto"
+              className="h-12 w-auto"
               onError={(e) => {
                 // Fallback se a imagem não carregar
                 e.currentTarget.style.display = 'none';
                 e.currentTarget.nextElementSibling!.style.display = 'block';
               }}
             />
-            <div className="hidden text-2xl font-bold text-gray-900">
+            <div className="hidden text-2xl font-bold text-white">
               Mr.<span className="text-[#FF914D]">CRM</span>
             </div>
           </div>
@@ -48,25 +48,25 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             <button 
               onClick={() => scrollToSection('inicio')}
-              className="text-gray-700 hover:text-[#FF914D] transition-colors duration-200 font-medium"
+              className="text-gray-300 hover:text-[#FF914D] transition-colors duration-200 font-medium"
             >
               Início
             </button>
             <button 
               onClick={() => scrollToSection('funcionalidades')}
-              className="text-gray-700 hover:text-[#FF914D] transition-colors duration-200 font-medium"
+              className="text-gray-300 hover:text-[#FF914D] transition-colors duration-200 font-medium"
             >
               Funcionalidades
             </button>
             <button 
               onClick={() => scrollToSection('casos-de-uso')}
-              className="text-gray-700 hover:text-[#FF914D] transition-colors duration-200 font-medium"
+              className="text-gray-300 hover:text-[#FF914D] transition-colors duration-200 font-medium"
             >
               Casos de Uso
             </button>
             <button 
               onClick={() => scrollToSection('contato')}
-              className="text-gray-700 hover:text-[#FF914D] transition-colors duration-200 font-medium"
+              className="text-gray-300 hover:text-[#FF914D] transition-colors duration-200 font-medium"
             >
               Contato
             </button>
@@ -83,7 +83,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-[#FF914D] hover:bg-gray-100"
+            className="md:hidden p-2 rounded-md text-gray-300 hover:text-[#FF914D] hover:bg-gray-800"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -92,28 +92,28 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-black border-t border-gray-800">
               <button 
                 onClick={() => scrollToSection('inicio')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-[#FF914D] hover:bg-gray-50 rounded-md font-medium"
+                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-[#FF914D] hover:bg-gray-800 rounded-md font-medium"
               >
                 Início
               </button>
               <button 
                 onClick={() => scrollToSection('funcionalidades')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-[#FF914D] hover:bg-gray-50 rounded-md font-medium"
+                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-[#FF914D] hover:bg-gray-800 rounded-md font-medium"
               >
                 Funcionalidades
               </button>
               <button 
                 onClick={() => scrollToSection('casos-de-uso')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-[#FF914D] hover:bg-gray-50 rounded-md font-medium"
+                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-[#FF914D] hover:bg-gray-800 rounded-md font-medium"
               >
                 Casos de Uso
               </button>
               <button 
                 onClick={() => scrollToSection('contato')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-[#FF914D] hover:bg-gray-50 rounded-md font-medium"
+                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-[#FF914D] hover:bg-gray-800 rounded-md font-medium"
               >
                 Contato
               </button>
