@@ -30,7 +30,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
-              src="/public/logo-mrcrm.png" 
+              src="/logo-mrcrm.png" 
               alt="Mr.CRM" 
               className="h-12 w-auto"
               onError={(e) => {
