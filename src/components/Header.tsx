@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
@@ -32,11 +32,13 @@ const Header = () => {
             <img 
               src="/logo-mrcrm.png" 
               alt="Mr.CRM" 
-              className="h-12 w-auto"
+              className="h-[77px] w-auto"
               onError={(e) => {
                 // Fallback se a imagem não carregar
-                e.currentTarget.style.display = 'none';
-                e.currentTarget.nextElementSibling!.style.display = 'block';
+                const imgElement = e.currentTarget as HTMLImageElement;
+                imgElement.style.display = 'none';
+                const nextElement = imgElement.nextElementSibling as HTMLElement;
+                if (nextElement) nextElement.style.display = 'block';
               }}
             />
             <div className="hidden text-2xl font-bold text-white">

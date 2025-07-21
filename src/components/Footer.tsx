@@ -1,4 +1,4 @@
-import React from 'react';
+// Nenhuma importação do React necessária
 import { MessageCircle, Mail, Phone, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -23,10 +23,12 @@ const Footer = () => {
               <img 
                 src="/logo-mrcrm.png" 
                 alt="Mr.CRM" 
-                className="h-10 w-auto mr-3"
+                className="h-[73px] w-auto mr-3"
                 onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling!.style.display = 'block';
+                  const imgElement = e.currentTarget as HTMLImageElement;
+                  imgElement.style.display = 'none';
+                  const nextElement = imgElement.nextElementSibling as HTMLElement;
+                  if (nextElement) nextElement.style.display = 'block';
                 }}
               />
               <div className="hidden text-2xl font-bold">
