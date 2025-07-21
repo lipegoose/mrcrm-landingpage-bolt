@@ -1,4 +1,3 @@
-import React from 'react';
 import { Check, ArrowRight, Users, Zap, Shield, Headphones } from 'lucide-react';
 
 const Pricing = () => {
@@ -85,7 +84,7 @@ const Pricing = () => {
               <div className="text-center">
                 <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8">
                   <div className="text-6xl font-bold mb-4">∞</div>
-                  <div className="text-xl font-semibold mb-2">Possibilidades Ilimitadas</div>
+                  <div className="text-xl font-semibold mb-2">Possibilidades ilimitadas</div>
                   <div className="text-white/90">
                     Não há limites para o que podemos criar juntos
                   </div>
